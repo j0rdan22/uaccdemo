@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @user_employee.user_name %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user_employee.password %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @user_employee.employee.first_name.capitalize! + " " + @user_employee.employee.last_name.capitalize! %>
+</p>
+
+<%= link_to 'Edit', edit_user_employee_path(@user_employee) %> |
+<%= link_to 'Back', user_employees_path %>

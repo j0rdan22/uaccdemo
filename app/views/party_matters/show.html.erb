@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Matter:</strong>
+  <%= @party_matter.matter %>
+</p>
+
+<p>
+  <strong>Party:</strong>
+  <%= @party_matter.party %>
+</p>
+
+<%= link_to 'Edit', edit_party_matter_path(@party_matter) %> |
+<%= link_to 'Back', party_matters_path %>

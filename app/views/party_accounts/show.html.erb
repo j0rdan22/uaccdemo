@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Party:</strong>
+  <%= @party_account.party.first_name + " " + @party_account.party.last_name %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @party_account.account.account_number %>
+</p>
+
+<%= link_to 'Edit', edit_party_account_path(@party_account) %> |
+<%= link_to 'Back', party_accounts_path %>

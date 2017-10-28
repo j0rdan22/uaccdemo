@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Reported date:</strong>
+  <%= @matter.reported_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @matter.end_date %>
+</p>
+
+<p>
+  <strong>Added date:</strong>
+  <%= @matter.added_date %>
+</p>
+
+<p>
+  <strong>Added by:</strong>
+  <%= @matter.added_by %>
+</p>
+
+<p>
+  <strong>Modified date:</strong>
+  <%= @matter.modified_date %>
+</p>
+
+<p>
+  <strong>Modified by:</strong>
+  <%= @matter.modified_by %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @matter.comment %>
+</p>
+
+<p>
+  <strong>Matter type:</strong>
+  <%= @matter.matter_type.type_description%>
+</p>
+
+<p>
+  <strong>Matter status:</strong>
+  <%= @matter.matter_status.status_description %>
+</p>
+
+<p>
+  <strong>Matter source:</strong>
+  <%= @matter.matter_source.source_description %>
+</p>
+
+<p>
+  <strong>Matter category:</strong>
+  <%= @matter.matter_category.category_description %>
+</p>
+
+<p>
+  <strong>Resolution code:</strong>
+  <%= @matter.resolution_code.resolution_code_description %>
+</p>
+
+<p>
+  <strong>Urgency level:</strong>
+  <%= @matter.urgency_level.level_description %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @matter.department.name %>
+</p>
+
+<%= link_to 'Edit', edit_matter_path(@matter) %> |
+<%= link_to 'Back', matters_path %>

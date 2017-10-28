@@ -1,0 +1,22 @@
+<%= form_with(model: resolution_code, local: true) do |form| %>
+  <% if resolution_code.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(resolution_code.errors.count, "error") %> prohibited this resolution_code from being saved:</h2>
+
+      <ul>
+      <% resolution_code.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :resolution_code_description, " Resolution Code" %>
+    <%= form.text_field :resolution_code_description, id: :resolution_code_resolution_code_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit " Create Resolution Code" %>
+  </div>
+<% end %>

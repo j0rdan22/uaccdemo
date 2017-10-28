@@ -1,0 +1,2 @@
+class MatterSource < ApplicationRecord
+end

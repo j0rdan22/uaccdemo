@@ -1,0 +1,27 @@
+<%= form_with(model: party_matter, local: true) do |form| %>
+  <% if party_matter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(party_matter.errors.count, "error") %> prohibited this party_matter from being saved:</h2>
+
+      <ul>
+      <% party_matter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :matter_id %>
+    <%= form.text_field :matter_id, id: :party_matter_matter_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :party_id %>
+    <%= form.text_field :party_id, id: :party_matter_party_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

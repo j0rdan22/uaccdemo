@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Employees</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>Password</th>
+      <th>Employee</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_employees.each do |user_employee| %>
+      <tr>
+        <td><%= user_employee.user_name %></td>
+        <td><%= user_employee.password %></td>
+        <td><%= user_employee.employee.first_name.capitalize! + " " + user_employee.employee.last_name.capitalize! %></td>
+        <td><%= link_to 'Show', user_employee %></td>
+        <td><%= link_to 'Edit', edit_user_employee_path(user_employee) %></td>
+        <td><%= link_to 'Destroy', user_employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Employee', new_user_employee_path %>

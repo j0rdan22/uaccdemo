@@ -1,0 +1,2 @@
+class ResolutionCode < ApplicationRecord
+end

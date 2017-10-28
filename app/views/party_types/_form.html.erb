@@ -1,0 +1,22 @@
+<%= form_with(model: party_type, local: true) do |form| %>
+  <% if party_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(party_type.errors.count, "error") %> prohibited this party_type from being saved:</h2>
+
+      <ul>
+      <% party_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :type_description %>
+    <%= form.text_field :type_description, id: :party_type_type_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,87 @@
+<%= form_with(model: matter, local: true) do |form| %>
+  <% if matter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(matter.errors.count, "error") %> prohibited this matter from being saved:</h2>
+
+      <ul>
+      <% matter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :reported_date %>
+    <%= form.date_select :reported_date, id: :matter_reported_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.date_select :end_date, id: :matter_end_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :added_date %>
+    <%= form.date_select :added_date, id: :matter_added_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :added_by %>
+    <%= form.text_field :added_by, id: :matter_added_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :modified_date %>
+    <%= form.date_select :modified_date, id: :matter_modified_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :modified_by %>
+    <%= form.text_field :modified_by, id: :matter_modified_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_field :comment, id: :matter_comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :matter_type_id %>
+    <%= form.collection_select :matter_type_id, MatterType.all, :id ,:type_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :matter_status_id %>
+    <%= form.collection_select :matter_status_id, MatterStatus.all, :id, :status_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :matter_source_id %>
+    <%= form.collection_select :matter_source_id, MatterSource.all, :id, :source_description%>
+  </div>
+
+  <div class="field">
+    <%= form.label :matter_category_id %>
+    <%= form.collection_select :matter_category_id, MatterCategory.all, :id, :category_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :resolution_code_id %>
+    <%= form.collection_select :resolution_code_id, ResolutionCode.all, :id, :resolution_code_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :urgency_level_id %>
+    <%= form.collection_select :urgency_level_id, UrgencyLevel.all, :id, :level_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :department_id %>
+    <%= form.collection_select :department_id, Department.all, :id, :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,217 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree
+ *= require_self
+ */
+
+/*This is the CSS for the aplication as a whole */
+
+body{
+    background-color: #BBBBBB;
+}
+
+h1{
+
+    color: blue;
+}
+
+a:link{
+    text-decoration: none;
+
+}
+
+
+
+
+
+/* This is the CSS for buttons*/
+
+.button {
+    background-color: ghostwhite;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+
+}
+
+
+.backbutton {
+
+    background-color: ghostwhite;
+    border: none;
+    color: black;
+    padding: 15px 60px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 30px;
+    cursor: pointer;
+
+}
+
+
+
+/* This is the CSS for div in index.html.erb*/
+
+.indexDiv{
+    background-color: #001B25;
+    padding-bottom: 30px;
+
+    color: slategrey;
+}
+
+.indexText{
+
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 40px;
+}
+
+
+/* This is the CSS for the menu*/
+
+
+.dropbtn {
+    background-color: #001B25;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    min-width: 100px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* This is the CSS for the forms*/
+
+.formpage {
+
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.label{
+    font-size: 20px;
+}
+.text {
+    width: 100%;
+    padding: 10px 150px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+.select-field
+{
+font-size: 15px;
+width: 100%;
+padding: 6px 6px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #999999;
+border-radius: 4px;
+box-sizing: border-box;
+text-transform: capitalize;
+}
+
+.notestext{
+    width: 100%;
+    height: 100px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+
+    font-size: 12px;
+
+}
+
+
+.formfooter{
+    background-color: steelblue;
+    padding-bottom: 30px;
+}
+
+/*This is the CSS for the div and text in new_html.erb*/
+
+.newdiv {
+    background-color: #001B25;
+    padding-bottom: 30px;
+
+}
+.newText{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Telugu MN";
+    padding-top: 40px;
+    display: block;
+}
+
+.indextable{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.indextable td{
+    border-collapse: collapse;
+    background-color: white;
+    border: solid;
+    padding: 10px;
+    border: 1px solid #ddd;}
+
+.indextable th{
+    background-color: cornsilk;
+    font-size: 10px;
+}
+
+
+
+
+
+
+

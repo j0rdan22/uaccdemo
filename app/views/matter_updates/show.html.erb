@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Matter:</strong>
+  <%= @matter_update.matter_id %>
+</p>
+
+<p>
+  <strong>Update:</strong>
+  <%= @matter_update.update_id %>
+</p>
+
+<%= link_to 'Edit', edit_matter_update_path(@matter_update) %> |
+<%= link_to 'Back', matter_updates_path %>

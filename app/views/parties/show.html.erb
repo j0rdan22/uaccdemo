@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @party.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @party.last_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @party.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @party.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @party.state.name%>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @party.zip_code %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @party.phone_number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @party.email %>
+</p>
+
+<p>
+  <strong>Last four ssn:</strong>
+  <%= @party.last_four_ssn %>
+</p>
+
+<p>
+  <strong>Added date:</strong>
+  <%= @party.added_date %>
+</p>
+
+<p>
+  <strong>Added by:</strong>
+  <%= @party.added_by %>
+</p>
+
+<p>
+  <strong>Modified date:</strong>
+  <%= @party.modified_date %>
+</p>
+
+<p>
+  <strong>Modified by:</strong>
+  <%= @party.modified_by %>
+</p>
+
+<p>
+  <strong>Party type:</strong>
+  <%= @party.party_type.type_description %>
+</p>
+
+<%= link_to 'Edit', edit_party_path(@party) %> |
+<%= link_to 'Back', parties_path %>

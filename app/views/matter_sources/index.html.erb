@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Matter Sources</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Source description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @matter_sources.each do |matter_source| %>
+      <tr>
+        <td><%= matter_source.source_description %></td>
+        <td><%= link_to 'Show', matter_source %></td>
+        <td><%= link_to 'Edit', edit_matter_source_path(matter_source) %></td>
+        <td><%= link_to 'Destroy', matter_source, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Matter Source', new_matter_source_path %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Matter Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @matter_types.each do |matter_type| %>
+      <tr>
+        <td><%= matter_type.type_description %></td>
+        <td><%= link_to 'Show', matter_type %></td>
+        <td><%= link_to 'Edit', edit_matter_type_path(matter_type) %></td>
+        <td><%= link_to 'Destroy', matter_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Matter Type', new_matter_type_path %>

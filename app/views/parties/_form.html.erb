@@ -1,0 +1,87 @@
+<%= form_with(model: party, local: true) do |form| %>
+  <% if party.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(party.errors.count, "error") %> prohibited this party from being saved:</h2>
+
+      <ul>
+      <% party.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :party_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :party_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :party_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :party_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state_id %>
+    <%= form.collection_select :state_id,State.all, :id,:name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zip_code %>
+    <%= form.text_field :zip_code, id: :party_zip_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number, id: :party_phone_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :party_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_four_ssn %>
+    <%= form.text_field :last_four_ssn, id: :party_last_four_ssn %>
+  </div>
+
+  <div class="field">
+    <%= form.label :added_date %>
+    <%= form.date_select :added_date, id: :party_added_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :added_by %>
+    <%= form.text_field :added_by, id: :party_added_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :modified_date %>
+    <%= form.date_select :modified_date, id: :party_modified_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :modified_by %>
+    <%= form.text_field :modified_by, id: :party_modified_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :party_type_id %>
+    <%= form.collection_select :party_type_id, PartyType.all, :id, :type_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

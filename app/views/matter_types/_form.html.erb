@@ -1,0 +1,22 @@
+<%= form_with(model: matter_type, local: true) do |form| %>
+  <% if matter_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(matter_type.errors.count, "error") %> prohibited this matter_type from being saved:</h2>
+
+      <ul>
+      <% matter_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :type_description %>
+    <%= form.text_field :type_description, id: :matter_type_type_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Matter Statuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @matter_statuses.each do |matter_status| %>
+      <tr>
+        <td><%= matter_status.status_description %></td>
+        <td><%= link_to 'Show', matter_status %></td>
+        <td><%= link_to 'Edit', edit_matter_status_path(matter_status) %></td>
+        <td><%= link_to 'Destroy', matter_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Matter Status', new_matter_status_path %>

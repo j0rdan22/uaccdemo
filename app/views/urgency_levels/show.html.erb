@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Level description:</strong>
+  <%= @urgency_level.level_description %>
+</p>
+
+<%= link_to 'Edit', edit_urgency_level_path(@urgency_level) %> |
+<%= link_to 'Back', urgency_levels_path %>

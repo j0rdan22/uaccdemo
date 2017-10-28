@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reported_date: 2017-10-27
+  end_date: 2017-10-27
+  added_date: 2017-10-27
+  added_by: MyString
+  modified_date: 2017-10-27
+  modified_by: MyString
+  comment: MyString
+  matter_type: one
+  matter_status: one
+  matter_source: one
+  matter_category: one
+  resolution_code: one
+  urgency_level: one
+  department: one
+
+two:
+  reported_date: 2017-10-27
+  end_date: 2017-10-27
+  added_date: 2017-10-27
+  added_by: MyString
+  modified_date: 2017-10-27
+  modified_by: MyString
+  comment: MyString
+  matter_type: two
+  matter_status: two
+  matter_source: two
+  matter_category: two
+  resolution_code: two
+  urgency_level: two
+  department: two

@@ -1,0 +1,2 @@
+class MatterUpdate < ApplicationRecord
+end

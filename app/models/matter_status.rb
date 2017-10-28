@@ -1,0 +1,2 @@
+class MatterStatus < ApplicationRecord
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Matter Category Codes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category code</th>
+      <th>Matter category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @matter_category_codes.each do |matter_category_code| %>
+      <tr>
+        <td><%= matter_category_code.category_code.code_description %></td>
+        <td><%= matter_category_code.matter_category.category_description %></td>
+        <td><%= link_to 'Show', matter_category_code %></td>
+        <td><%= link_to 'Edit', edit_matter_category_code_path(matter_category_code) %></td>
+        <td><%= link_to 'Destroy', matter_category_code, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Matter Category Code', new_matter_category_code_path %>

@@ -1,0 +1,102 @@
+<%= form_with(model: employee, local: true) do |form| %>
+  <% if employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+    <div class = "formpage">
+
+  <table>
+    <tr>
+<td>
+       <%= form.label :first_name, :class =>'label' %>
+      <%= form.text_field :first_name, id: :employee_first_name,:class =>'text' %>
+</td>
+
+
+
+      <td>
+        <%= form.label :last_name, :class =>'label' %>
+      <%= form.text_field :last_name, id: :employee_last_name,:class =>'text' %>
+      </td>
+    </tr>
+
+
+
+    <tr>
+      <td>
+        <%= form.label :email, :class =>'label' %>
+      <%= form.text_field :email, id: :employee_email,:class =>'text' %></td>
+
+      <td><%= form.label :phone_number, :class =>'label' %>
+
+      <%= form.text_field :phone_number, id: :employee_phone_number,:class =>'text' %>
+      </td>
+
+    </tr>
+
+    <tr>
+      <td>
+      <%= form.label :added_date %>
+      <%= form.date_select :added_date, id: :employee_added_date %>
+      </td>
+
+<td>
+      <%= form.label :added_by, :class =>'label' %>
+      <%= form.text_field :added_by, id: :employee_added_by,:class =>'text' %>
+
+</td>
+    </tr>
+    <tr>
+      <td>
+
+      <%= form.label :modified_date %>
+      <%= form.date_select :modified_date, id: :employee_modified_date %>
+    </td>
+
+    <td>
+      <%= form.label :modified_by,:class =>'label' %>
+      <%= form.text_field :modified_by, id: :employee_modified_by,:class =>'text' %>
+    </td>
+
+
+    </tr>
+
+    <tr>
+      <td>
+        <%= form.label :employee_status_id,:class =>'label'%>
+        <%= form.collection_select :employee_status_id, EmployeeStatus.all, :id, :status_description, :class =>'select-field' %>
+      </td>
+
+
+  <td>
+
+        <%= form.label :location_id %>
+        <%= form.collection_select :location_id, Location.all, :id, :description,:prompt => 'Select Location' %>
+  </td>
+
+<td>
+        <%= form.label :employee_type_id %>
+        <%= form.collection_select :employee_type_id, EmployeeType.all, :id, :type_description,:prompt => 'Select Type' %>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <%= form.submit %>
+      </td>
+    </tr>
+
+
+  </table>
+    </div>
+<% end %>

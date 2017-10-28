@@ -1,0 +1,22 @@
+<%= form_with(model: matter_source, local: true) do |form| %>
+  <% if matter_source.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(matter_source.errors.count, "error") %> prohibited this matter_source from being saved:</h2>
+
+      <ul>
+      <% matter_source.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :source_description %>
+    <%= form.text_field :source_description, id: :matter_source_source_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

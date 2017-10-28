@@ -1,0 +1,27 @@
+<%= form_with(model: matter_category_code, local: true) do |form| %>
+  <% if matter_category_code.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(matter_category_code.errors.count, "error") %> prohibited this matter_category_code from being saved:</h2>
+
+      <ul>
+      <% matter_category_code.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :category_code_id %>
+    <%= form.collection_select :category_code_id, CategoryCode.all, :id, :code_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :matter_category_id %>
+    <%= form.collection_select :matter_category_id, MatterCategory.all, :id, :category_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

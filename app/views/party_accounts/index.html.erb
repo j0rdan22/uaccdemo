@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Party Accounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Party</th>
+      <th>Account</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @party_accounts.each do |party_account| %>
+      <tr>
+        <td><%= party_account.party %></td>
+        <td><%= party_account.account.account_number %></td>
+        <td><%= link_to 'Show', party_account %></td>
+        <td><%= link_to 'Edit', edit_party_account_path(party_account) %></td>
+        <td><%= link_to 'Destroy', party_account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Party Account', new_party_account_path %>

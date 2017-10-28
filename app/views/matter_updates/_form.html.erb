@@ -1,0 +1,27 @@
+<%= form_with(model: matter_update, local: true) do |form| %>
+  <% if matter_update.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(matter_update.errors.count, "error") %> prohibited this matter_update from being saved:</h2>
+
+      <ul>
+      <% matter_update.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :matter_id %>
+    <%= form.collection_select :matter_id, Matter.all, :id ,:comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :update_id %>
+    <%= form.collection_select :update_id, Update.all, :id, :update_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

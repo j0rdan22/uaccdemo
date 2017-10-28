@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UACCApp2</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+
+
+
+
+
+  <div class = "dropdown">
+    <button class="dropbtn"> Employees</button>
+    <div class ="dropdown-content">
+      <%= link_to "Departments", employee_departments_path%>
+      <%= link_to "Status", employee_statuses_path%>
+      <%= link_to "Types", employee_types_path%>
+      <%= link_to " States",states_path%>
+
+    </div>
+  </div>
+
+  <div class = "dropdown">
+    <button class="dropbtn"> Matters</button>
+    <div class ="dropdown-content">
+      <%= link_to "Category", matter_categories_path%>
+      <%= link_to "Category Code", category_codes_path%>
+      <%= link_to "Types", matter_types_path%>
+      <%= link_to " Status",matter_statuses_path%>
+      <%= link_to " Urgency Level",urgency_levels_path%>
+
+    </div>
+  </div>
+
+  <div class = "dropdown">
+    <button class="dropbtn"> Parties</button>
+    <div class ="dropdown-content">
+      <%= link_to "Type", party_types_path%>
+
+
+    </div>
+  </div>
+
+
+  <div class = "dropdown">
+    <button class="dropbtn"> Account</button>
+
+  </div>
+
+    <%= yield %>
+  </body>
+</html>

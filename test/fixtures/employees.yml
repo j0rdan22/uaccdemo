@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  phone_number: MyString
+  added_date: 2017-10-27
+  added_by: MyString
+  modified_date: 2017-10-27
+  modified_by: MyString
+  employee_status: one
+  location: one
+  employee_type: one
+
+two:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  phone_number: MyString
+  added_date: 2017-10-27
+  added_by: MyString
+  modified_date: 2017-10-27
+  modified_by: MyString
+  employee_status: two
+  location: two
+  employee_type: two
